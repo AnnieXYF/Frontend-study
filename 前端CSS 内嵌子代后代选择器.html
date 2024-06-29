@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 后代选择器 :选择所选标签的后续所有标签*/
+        body p {
+            color:brown
+        }
+        /* 子代选择器 :选择所选标签的后续第一层标签 div 和 p 是一级*/
+        body>p {
+            color:blue
+        }
+        /*子代和后代选择器可以多级往后写的 */
+        div>p>span{
+            background-color:aqua
+
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            <span>div中的p中的span</span>
+            div下p标签内容
+        </p>
+    </div>
+    <p>
+        直接在body中的p标签内容
+    </p>
+</body>
+</html>

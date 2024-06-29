@@ -1,0 +1,57 @@
+<!-- 标签选择器 -->
+标签名{ 属性:值;}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* 选择某一个标签进行渲染 */
+        #header { 
+            color:aquamarine
+        } 
+/* # header 就是一个id值 */
+        .one{
+            color:brown
+        }
+/* . one 就是一个class值  */
+        h1.pages{
+            color:blue
+        }
+/* h1是选定标签，然后确定这个标签的某一个类 */
+        #header,#footer{
+            background-color: blueviolet;
+        }
+/* #header 和 #footer 就是把两个指定的id一同渲染 */
+        *{
+
+        }
+
+/* 通用选择器，用于去除默认效果 */
+    </style>
+
+
+</head>
+<body>
+<!-- id选择器 给标签分配唯一标志，加以区分，id只能有一个 -->
+    <div id="header"> id选择器</div>
+<!-- 类选择器 用来给一组标签分配标志, 一个标签可以有多个class -->
+ <!-- #这个代表两个class类 -->
+    <div class="one pages"> 
+        class选择器 
+    </div>
+    <div class="one">
+        class选择器
+    </div>
+<!-- 组合选择器 用于某特定标签的某一类-->
+    <h1 class="pages">组合标签h1</h1>
+    <h2 class="pages">组合标签h2</h2>
+<!-- 群组选择器 用于把多个id选择在一起 -->
+    <div id="footer">群组选择器</div>
+</body>
+</html>
+
+
+

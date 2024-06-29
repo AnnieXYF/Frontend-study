@@ -1,0 +1,72 @@
+<!-- 有序列表 （自动生成序号，显示不同内容） -->
+ <ol> # order list 代表有序列表
+    <li>第一项</li>
+    <li>第二项</li>
+    <li>第三项</li>
+ </ol>
+
+ <!-- 无序列表 （不生成序号，只会有小圆点） -->
+  <ul> #unordered list
+    <li>第一项</li>
+    <li>第二项</li>
+    <li>第三项</li>
+  </ul>
+#可用ul>li*3 这种来一次性生成多行
+<ul>
+    <li>part01
+        <ol>
+            <li>no.1</li>
+            <li>no.2</li>
+        </ol>
+    </li>
+    <li>part02
+        <ol>
+            <li>no.1</li>
+            <li>no.2</li>
+        </ol>
+    </li>
+    <li>part03
+        <ol>
+            <li>no.1</li>
+            <li>no.2</li>
+        </ol>
+    </li>
+</ul>
+
+<!-- 表格标签 （实现横纵向展现） -->
+<!-- 创建表格标签 --> 
+<table border="1px"> #可以加上线
+<!-- 创建行标签 --> 
+    <tr>
+<!-- 行中创建单元格以显示数据 --> 
+        <td>姓名</td>
+        <td>年龄</td>
+        <td>班级</td>
+    </tr> 
+    <tr>
+        <td>迪丽热巴</td> 
+        <td>20</td> 
+        <td>002</td>
+    </tr>
+</table>
+<!-- 单元格合并 -->
+    <table border="1px">
+    <tr>
+        <!-- colspan 跨列合并 -->
+        <td colspan="2">1行1列</td>  需要把合并的列删除
+        <td>1行3列</td>
+        <td>1行4列</td>
+    </tr>
+    <tr>
+        <!-- rowspan 跨行合并 -->
+        <td rowspan="2">2行1列</td>
+        <td>2行2列</td>
+        <td>2行3列</td>
+        <td>2行4列</td>
+    </tr>
+    <tr>
+        <td>3行2列</td>
+        <td>3行3列</td>
+        <td>3行4列</td>
+    </tr>
+    </table>

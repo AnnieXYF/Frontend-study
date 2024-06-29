@@ -1,0 +1,77 @@
+<!-- width， height 属性，以及长度颜色属性表示 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* width, height 用来设定目标标签的高度和宽度 */
+        img{
+            width: 200px;
+            height: 240px;
+        }
+        /* hover是伪类选择器*/
+        img:hover{
+            width: 240px;
+            height: 360px;
+        }
+    </style>
+</head>
+<body>
+    <img src="image/1.jpeg" alt="高圆圆加载失败" >
+    <img src="image/2.jpeg" alt="赵丽颖加载失败" >
+    <img src="image/3.jpeg" alt="刘亦菲加载失败" >
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 绝对长度单位，用数学计数表示 */
+        div{
+            width: 5cm;
+            height: 5cm;
+            background-color: antiquewhite;
+        }
+        /* 相对长度单位，用px，em相对于元素的字体大小(未设置则相对浏览器默认字体)，%相对父元素的百分比 来表示 */
+        div{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div>绝对计量单位</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 主要是用三原色RGB(r,g,b) 来表达不同颜色, 最高搭配是0-255*/
+        div{
+            background-color: rgb(100,100,100);
+        }
+        /* rgba 代表透明度, a 的取值是0.0-1.0*/
+        div{
+            background-color: rgba{100,100,100,0.8};
+        }
+        /* hex 十六进制表示颜色 */
+        div{
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div>绝对计量单位</div>
+</body>
+</html>

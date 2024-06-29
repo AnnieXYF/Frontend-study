@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 修饰</title>
+<!-- CSS 的渲染都在head完成，以style开头 -->
+     <style>
+        /* 内嵌样式：在head里写一个标签style,并明确好需要渲染的标签集*/
+        h2{color:brown;}
+     </style>
+    <!-- 外联样式：写一个link并单独创建CSS文件并进行超链接 （与超链接标签的a区分）-->
+     <link rel="stylesheet" href="/Users/annie/Desktop/全栈开发网课/Python 资料/python 全栈开发/前端笔记/CSS 外链样式.css">
+</head>
+<body>
+    <!-- 行内样式: 在标签中添加style,通过键值对进行修饰，别忘写分号 （用于修饰一个元素即一个标签） -->
+    <h1 style="color:blue;">来吧，修饰我吧</h1>
+    <h2>另一种修饰方式</h2>
+    <h2>再试一下</h2>
+    <p>外链样式演示</p>
+</body>
+</html>
+
+<!-- 语法： 选择器+css 属性键值对 -->
+p{ #选择器名字： 灵活选择页面元素
+    color:burlywood #属性键值对：对选择的元素进行渲染
+}
+

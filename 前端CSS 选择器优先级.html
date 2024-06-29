@@ -1,0 +1,105 @@
+<!-- 选择器特性 -->
+# 层叠性：多个样式共同作用同一个元素时，将会一起生效
+# 继承性：后代元素可以继承祖先元素的某些样式
+# 优先级：
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+       p{
+           color:blue;
+       }
+       #green{
+           font-size: 30px;
+       }
+       h3{
+           color: brown;
+       }
+   </style>
+</head>
+<body>
+   <p id="green"> nice to meet you</p>
+   <h3>
+       <!-- span 可以继承h3的样式 -->
+       <span>推进牵过</span>
+       你好
+   </h3>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+       /* 继承样式和默认样式优先级相同 （取决于标签和浏览器） */
+       body{
+           font-size: 30px;
+           color:brown
+       }
+       /* 标签选择器优先级大于默认样式/继承样式 */
+       h1{
+           color:aqua
+       }
+       /* 类选择器优先级大于标签选择器 */
+       .blue{
+           color:blue
+       }
+       /* id选择器优先级大于类选择器 */
+       #orange{
+           color:chocolate
+       }
+       /* 每个选择器作用的元素，独立计算优先级 */
+       h1,a{
+        color:blueviolet
+       }
+       /*组合选择器 后代选择器 子代选择器 优先级是累加计算 */
+
+   </style>
+</head>
+<body>
+   <!-- 行内优先级大于内嵌或外联样式 -->
+   <h1 class="blue" id="orange" style="color:green">
+    <!-- 不同的优先级有不同的权重值 -->
+       优先级测试: 行内1000> id 选择器100> 类选择器10 >标签选择器1> 默认/继承样式0
+   </h1>
+   <a href="">这是一个链接</a>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 组合选择器是将不同选择器的权重值相加：两个标签选择器 是2 */
+        body a{
+            color: purple
+        }
+        /* 一个类选择器是10 */
+        .black{
+            color:black
+        }
+        /* 一个id选择器是100 */
+        #brown{
+            color:cadetblue
+        }
+              /* 所以最后听权重大的 */
+        /*如果两个组合选择器下权重相同的时候，位置靠后的会覆盖前方的 */
+        body.black{
+            color:aquamarine
+        }
+    </style>
+</head>
+<body>
+    <a href="" class="black" id="brown">这是组合选择器的一个链接</a>
+</body>
+</html>

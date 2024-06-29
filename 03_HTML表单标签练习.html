@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>增加管理员</h1>
+    <form action="https://www.baidu.com/s" method="post" enctype="multipart/form-data">
+        <div>
+            姓名：<input type="text" maxlength="10" name="name">
+        </div>
+        <div>
+            密码：<input type="password" maxlength="10" name="password">
+        </div>
+        <div>
+        性别：
+        <input type="radio" name="sex" value="0"> 男士
+        <input type="radio" name="sex" value="1"> 女士
+        </div>
+        <div>
+        角色：
+        <input type="checkbox" name="role" value="0">超级管理员
+        <input type="checkbox" name="role" value="1">账单管理员
+        </div>
+        <div>
+        头像：
+        <input type="file" name="photo">
+        </div>
+        <div>
+        <input type="submit" name="save" value="保存">
+        <input type="reset" name="reset" value="重置">
+        </div>   
+    </form>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tmocc</title>
+</head>
+<body>
+    <form action="https://www.baidu.com/s" method="post" enctype="multipart/form-data">
+        <div>
+            <h3>手机注册</h3>
+            <hr>
+        </div>
+        <div>
+            <input type="text" name="phone" placeholder="手机号">
+        </div>
+        <div>
+            <input type="password" name="password" placeholder="密码">
+        </div>
+        <div>
+            <input type="password" name="password" placeholder="确认密码">
+        </div>
+        <div>
+            <input type="text" name="check" placeholder="验证码">
+            <img src="https://uc.tmooc.cn/validateCode?t=0.3982734310667393" alt="">
+            <span>看不清楚,换一张</span>
+        </div>
+        <div>
+            <input type="text" name="auto" placeholder="动态码">
+            <button>
+                获取动态码
+            </button>
+        </div>
+        <div>
+            <input type="submit" name="register" value="注册">
+        </div>
+        <div>
+            <input type="checkbox" name="select"><span>我已经阅读相关文件</span>
+            <span><a href="https://www.tmooc.cn/user-agreement/index.shtml">用户注册协议</a></span>
+        </div>
+        <div>
+            <span>已有账户？<a href="https://uc.tmooc.cn/login/jumpTologin">立即登录</a></span>
+
+        </div>
+    </form>
+</body>
+</html>

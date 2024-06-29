@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color:yellowgreen;
+            width: 100px;
+            height: 50px;
+        }
+        input{
+            width: 100px;
+            height: 50px;
+        }
+        a{
+            /* display 用于改变标签的分类 */
+            display:inline-block;
+            width: 100px;
+            height: 50px;
+            background-color: aquamarine;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 标签类型1 块元素： 独占一行的标签，可以调节高度  -->
+    <h2> 第一行</h2>
+    <h1> 块元素</h1>
+    <!-- 块元素即独占一行的：body div h1~h6 p ul ol li form table tr hr -->
+    <!-- 标签类型2 行内元素: 挤在一起的标签，且不可以调节高度 -->
+    <a href="">第一个标签</a>
+    <a href="">行内元素</a>
+    <!-- 可以与其他元素共行显示;不能手动设置宽高,尺寸由内容决定 例 : span a -->
+    <!-- 标签类型3 行内块元素：挤在一起的标签，且可以调节高度  -->
+    行内块元素 <input type="text" name="name">
+    <!-- 可以与其他元素共行显示,又能手动调整宽高 例 : img input button textarea td -->
+</body>
+</html>
