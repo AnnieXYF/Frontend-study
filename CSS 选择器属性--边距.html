@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>边距</title>
+    <!-- 
+    内边距 padding （标签内的内容间距）
+    单方向内边距 padding- top/right/bottom/left
+    外边距 margin （两个标签之间的距离）
+    单方向外边距 margin- top/right/bottom/left -->
+    <style>
+        #outer{
+            width: 200px;
+            height:200px;
+            background-color: red;
+            /* 调整元素与元素之间的距离，最多取4个值，按照顺序分别表 示上右下左四个方向的距离 */
+            margin:50px;
+            border:none;
+            /* 避免上外边距塌陷问题 */
+            overflow: hidden;
+        }
+        #next{
+            width: 200px;
+            height:200px;
+            background-color: blue;
+            /* 单方向外边距 */
+            /*  边距合并按照边距大的为主 */
+            margin-top:30px;
+            border:none;
+        }
+        #inner{
+            width: 100px;
+            height:100px;
+            background-color: green;
+            border:none;
+            margin-left: 30px;
+            /* 上外边距塌陷问题：会带着底层元素一起往下走 */
+            margin-top: 30px;
+
+        }
+        /* 将默认边距先去掉 */
+        *{
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner"></div>
+    </div>
+
+    <div id="next"></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>边框</title>
+<!-- 边框 border
+单边框 border- top/right/bottom/left
+边框 圆⻆ border-radius
+     -->
+    <style>
+        div{
+            /* 三个值，分别为宽度/样式/颜色，用空格隔开，如 1px solid red(1像素实线边框) hidden 隐藏边框 */
+            /* double 双线； dashed 虚线 dotted 点线 */
+            border: 3px solid red;
+            border-top: 3px solid green;
+        }
+        button{
+            /* 去掉边框 */
+            border:none;
+            /* 边框圆角可以写多个值用于不同的圆角，没有设置的角将和对角保持一致 */
+            border-radius: 10px 20px 50px;
+        }
+    </style>
+
+</head>
+<body>
+    <div></div>
+    <button>快乐小按钮</button>
+</body>
+</html>
