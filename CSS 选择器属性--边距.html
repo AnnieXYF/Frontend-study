@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>边距</title>
+    <title>外边距可以为负，因为右侧没有参照物</title>
     <!-- 
-    内边距 padding （标签内的内容间距）
-    单方向内边距 padding- top/right/bottom/left
     外边距 margin （两个标签之间的距离）
     单方向外边距 margin- top/right/bottom/left -->
     <style>
@@ -20,6 +18,8 @@
             border:none;
             /* 避免上外边距塌陷问题 */
             overflow: hidden;
+            /* 一个元素水平居中  上下0px 左右居中 */
+            margin: 0px auto;
         }
         #next{
             width: 200px;
@@ -28,6 +28,8 @@
             /* 单方向外边距 */
             /*  边距合并按照边距大的为主 */
             margin-top:30px;
+            /* 外边距可以为负，因为右侧没有参照物 */
+            margin-left: -50px;
             border:none;
         }
         #inner{
@@ -43,6 +45,7 @@
         /* 将默认边距先去掉 */
         *{
             margin: 0px;
+            padding: 0px;
         }
     </style>
 </head>
@@ -52,5 +55,48 @@
     </div>
 
     <div id="next"></div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内边距</title>
+    <!--     内边距 padding （标签内的内容间距）
+    单方向内边距 padding- top/right/bottom/left -->
+    <style>
+        .outer{
+            width:200px;
+            height: 200px;
+            background-color: red;
+            /* 常用像素值，调整元素内容与边框之间的距离， 最多取4个值，按照顺序分别表示上右下左四个方向的距离，最小值为0 */
+            padding: 50px;
+        }
+        .inner{
+            width:100px;
+            height: 100px;
+            background-color:blue;
+        }
+        .con{
+            width:200px;
+            height: 200px;
+            background-color:pink;
+            /* 内边距会使整个边框也变大  */
+            padding: 30px 40px;
+            /* 用于防止边框的扩大 */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    <div class="con">
+        推送完成后，可以访问你的GitHub仓库页面，查看最新的提交是否已经成功推送。
+        通过这些步骤，你应该能够将VSCode中的修改内容上传到GitHub现有的仓库URL里。如果在操作过程中遇到任何问题，请提供更多详细信息，以便进行进一步的排查和解决。
+    </div>
 </body>
 </html>
