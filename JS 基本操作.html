@@ -1,0 +1,30 @@
+<!-- 浏览器解释型语言,嵌套在HTML文件中交给浏览器解释执行。
+ 主要用来实现网⻚的动态 效果，用户交互及前后端的数据传输等。 -->
+
+<!-- 
+ JS 组成
+1. 核心语法 -ECMAScript (ES) 规范了JS的基本语法
+2. 浏览器对象模型 -BOM
+Browser Object Model，提供了一系列操作浏览器的方法(浏览器自身提示，跳转)
+3. 文档对象模型 -DOM
+Document Object Model ，提供了一系列操作的文档的方法（浏览器页面内容效果）
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--外部链接：创建外部的JS文件 XX.js，在HTML文档中使用引入  -->
+    <script src="demo.js"></script>
+</head>
+<body>
+
+    <!-- 文档内嵌。使用script标签书写 JS 代码，一般放在标签的最后 -->
+    <script>
+        // 这是一个内置BOM 函数，用来对浏览器自身进行提示
+        alert("BOM弹窗"); 
+    </script>
+</body>
+</html>

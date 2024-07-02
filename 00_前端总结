@@ -1,0 +1,4 @@
+html为基础，以标签为主
+CSS , JS 都基于特殊的标签，进行书写
+CSS 在head/body中利用style 标签，进行选择器+属性书写
+JS 在head/body中利用script 结合BOM,DOM的方法基于ES语法基于书写
