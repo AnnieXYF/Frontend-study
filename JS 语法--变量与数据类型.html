@@ -1,0 +1,84 @@
+<!-- 严格区分大小写 -->
+<!-- 变量：使用关键var声明,自定义变量名（小驼峰，即第一个字母小写，后面的首字母大写 -->
+var a; //变量声明
+a = 100; //变量赋值
+var b = 200; //声明并赋值
+var m,n,k; //同时声明多个变量
+var j = 10,c = 20; //同时声明并赋值多个变量
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 在控制台显示未声明的变量，不会报错
+        console.log(num)
+        //变量声明
+        var num;
+        //变量赋值
+        num=1
+    </script>
+</body>
+</html>
+
+<!-- 数据类型：
+ 数字：整形 浮点型
+ 字符串 sring
+ 布尔
+ 对象：空对象 null 数组对象 dict 对象list -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        // 不同数据类型
+        var a=10,b=3,c=true;
+        // typeof 查看数据类型
+        console.log(typeof a);
+        // 空对象
+        var d=null;
+        // 空对象打印出来是object
+        console.log(typeof d);
+
+    </script>
+ </body>
+ </html>
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串</title>
+ </head>
+ <body>
+    <script>
+        var s="hello word";
+        // 字符串基本方法
+        // 取不同的字符（没有直接的切片）
+        console.log(s[0]) 
+        // 获取长度
+        console.log(s.length) 
+        // 切片函数
+        console.log(s.slice(0,4))
+        // 拼接
+        console.log("Hi"+"jame")
+        // 或者
+        var name="Tom", age=18;
+        console.log(`${name} is ${age}`)
+        // 切割成两个部分
+        console.log(s.split(' '))
+
+
+    </script>
+ </body>
+ </html>
