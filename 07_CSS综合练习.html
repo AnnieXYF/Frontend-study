@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tmocc</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .background{
+            background-color: #f6f5fa;
+        }
+        #general{
+            background-color: white;
+            border: 0px solid white;
+            width: 310px;
+            height:300px;
+            position: fixed;
+            top:125px;
+            left:500px;
+            border-radius: 3px;
+        }
+        h2{
+            font-size: 15px;
+            margin-top:10px;
+            margin-left:10px;
+            padding: 20px auto;
+            width:70px;
+            height:21px;
+        }
+        hr{
+            border: .5px solid gray;
+            margin-left:10px;
+            width: 280px;
+        }
+        #phone, #password, #confirm{
+            margin-top:10px;
+            margin-left:10px;
+            width: 280px;
+            height: 20px;
+            font-size: 10px;
+        }
+        #yanzheng{
+            position: relative;
+        }
+
+        #check{
+            margin-top:10px;
+            margin-left:10px;
+            width: 60px;
+            height: 20px;
+            font-size: 10px;
+        }
+        #image{
+            width: 80px;
+            height: 20px;
+            position: absolute;
+            top: 10px;
+            left:80px;
+        }
+        #kanbuqing{
+            width: 80px;
+            height: 20px;
+            font-size: 10px;
+            position: absolute;
+            top:15px;
+            left: 180px;
+            color:grey;
+
+        }
+        #auto{
+            margin-top:10px;
+            margin-left:10px;
+            width: 170px;
+            height: 20px;
+            font-size: 10px;
+        }
+        button{
+            color: white;
+            background-color:#4b95ff;
+            border: 0px;
+            margin-left: 30px;
+            margin-top: 10px;
+            border-radius: 5px;
+            width: 70px;
+            height: 20px;
+            font-size: 10px;
+        }
+        #register{
+            margin-top:10px;
+            margin-left:10px;
+            width: 280px;
+            height: 30px;
+            font-size: 10px;
+            color: white;
+            background-color:#4b95ff;;
+            border-radius: 5px;
+            border: 0px;
+
+        }
+        .note{
+            margin-top: 15px;
+            margin-left: 5px;
+            font-size: 10px;
+        }
+        .note #read{
+            margin-left: 5px;
+        }
+        .note a{
+            text-decoration: none;
+            color: red;
+        }
+        .tips{
+            margin-left: 200px;
+            font-size: 10px;
+        }
+        .tips a{
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body class="background">
+    <form action="https://www.baidu.com/s" method="post" enctype="multipart/form-data">
+        <div id="general">
+            <div>
+                <h2>手机注册</h2>
+                <hr>
+            </div>
+            <div>
+                <input type="text" name="phone" placeholder="手机号" id="phone">
+            </div>
+            <div>
+                <input type="password" name="password" placeholder="密码" id="password">
+            </div>
+            <div>
+                <input type="password" name="password" placeholder="确认密码" id="confirm">
+            </div>
+            <div id="yanzheng" >
+                <input type="text" name="check" placeholder="验证码" id="check">
+                <img src="https://uc.tmooc.cn/validateCode?t=0.3982734310667393" alt="" id="image">
+                <span id="kanbuqing">看不清楚,换一张</span>
+            </div>
+            <div>
+                <input type="text" name="auto" placeholder="动态码" id="auto">
+                <button>
+                    获取动态码
+                </button>
+            </div>
+            <div>
+                <input type="submit" name="register" value="注册" id="register">
+            </div>
+            <div class="note">
+                <input type="checkbox" name="select"><span id="read">我已经阅读相关文件</span>
+                <span ><a href="https://www.tmooc.cn/user-agreement/index.shtml">《用户注册协议》</a></span>
+            </div>
+            <div class="tips">
+                <span>已有账户？<a href="https://uc.tmooc.cn/login/jumpTologin">立即登录</a></span>
+    
+            </div>
+
+        </div>
+        
+    </form>
+</body>
+</html>
