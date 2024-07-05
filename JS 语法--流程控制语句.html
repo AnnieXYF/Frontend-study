@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流程控制语句</title>
+</head>
+<body>
+    <script>
+        // if(条件表达式){表达式成立时执行的代码段}
+        var a=10,b=11;
+        if(a<b) {
+            console.log("条件为真")
+        }
+
+        var score=prompt("请输入分数") //页面输入
+        if (score>=90){
+            console.log("HD")
+        }
+        else if (score>=70){
+            console.log("D")
+        }
+        else {
+            console.log("P")
+        }
+    </script>
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环语句while</title>
+</head>
+<body>
+    <script>
+        // while(循环条件){ 条件满足时执行的代码段 更新循环变量;}
+        var n=0;
+        while(n<3){
+            var info=prompt("please input:")
+            if (info<5){
+                n++;
+                alert(`alert ${n}`)
+            }
+        }
+        alter('done')
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环语句for</title>
+</head>
+<body>
+    <script>
+        // for(1,定义循环变量;2,循环条件;4,更新循环变量){ 3,循环体;}
+        for(var i=0;i<10;i++){
+            console.log(i)
+            if (i==5){
+                break;
+            }
+        }
+        var num=[1,2,3,4,5]
+        for (var i=0;i<num.length;i++){
+            console.log(num[i])
+        }
+    </script>
+    
+</body>
+</html>

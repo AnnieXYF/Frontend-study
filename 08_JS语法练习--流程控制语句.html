@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num_list=[8,4,1,9,5,7,6,3]
+        for(var i=0; i<num_list.length-1;i++){
+            for (var j=0;j<num_list.length-1-i;j++){
+                if(num_list[j]<num_list[j+1]){
+                    var tmp=num_list[j]
+                    num_list[j]=num_list[j+1]
+                    num_list[j+1]=tmp
+                }
+
+            }
+        }
+        console.log(num_list)
+    </script>
+</body>
+</html>
