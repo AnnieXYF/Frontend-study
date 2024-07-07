@@ -1,0 +1,68 @@
+<!-- function 函数名(参数列表){函数体 return 返回值; }  
+    只用一次的匿名函数：（function (形参){ })(实参);
+    多次使用的匿名函数：var 函数名=function (参数列表){函数体 return 返回值; }-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 常规函数
+        function func(a,b=2){
+            console.log("fucntion ready");
+            return a+b;
+        }
+        // 调用
+        var res=func(10,20);
+        console.log(res); // NaN 代表not a number
+
+        // 匿名函数 （省略函数名的函数。）
+        var func01=function (a,b){
+            console.log("i am a fucntion");
+        }
+        //调用
+        func01(1,2);
+    </script>
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数与匿名函数</title>
+</head>
+<body>
+    <script>
+        var per={
+            name:"tom",//面向对象：属性
+            age:18,
+            run:function(){
+                console.log("run quickly");//面向对象：行为
+            }
+        }
+        console.log(per.name)
+        per.run() //调用行为需要括号
+
+
+        //高阶函数用匿名函数
+        function laozhang(name,tool){
+            console.log(name,"dongbei");
+            tool()
+        }
+        laozhang("zhang",function(){
+            console.log("by car")
+        })
+        laozhang("zhang",function(){
+            console.log("by plane")
+
+        })
+    </script>
+</body>
+</html>
