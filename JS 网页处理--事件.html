@@ -1,0 +1,34 @@
+<!--  事件的作用就是让网页动起来 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件绑定</title>
+</head>
+<body>
+    <!-- 事件名称作为属性，放在要绑定该事件的标签中，当标签发生对应事件时就执行JS代码-->
+    <button id="btn" onclick="func();">click me</button>
+    <script>
+        function func(){
+            while(true){
+                alert('点你')
+            }
+        }
+    </script>
+    <!-- 通过节点对象绑定事件，当事件发生之行函数-->
+    <h1>click me please</h1>
+    <script>
+        var h1=document.getElementsByTagName("h1");
+        // 将函数赋值给节点对象的事件属性
+        function func(){
+            h1[0].innerHTML="why you click it"
+        }
+        h1[0].onclick=func //不带括号，否则就是调用了
+        // 利用匿名函数进行直接的赋值
+        h1[0].onclick=function(){
+            this.innerHTML="click please" // this 和 h1[0] 是一个效果，谁调用this 就代表谁
+        }
+    </script>
+</body>
+</html>

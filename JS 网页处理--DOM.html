@@ -30,3 +30,36 @@
     
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对节点对象进行操作</title>
+</head>
+<body>
+    <h2 id="tar">1</h2>
+    <h2 class="one">2</h2>
+    <h2 class="one">3</h2>
+
+    <script>
+        var h2s=document.getElementsByTagName("h2") 
+        // 操作内容，相当于对原有内容覆盖
+        h2s[1].innerHTML='<a href="">content descrption</a>' //可以嵌套标签
+        h2s[2].innerText='<a href="">content descrption</a>' //不可以嵌套标签
+
+        // 操作属性
+        console.log(h2s[0].id) //获取属性值
+        h2s[0].align="center" //更改属性值
+
+        // 操作样式
+        h2s[0].style.color="red"
+        h2s[0].style.fontSize="50px" //所有多单词的关键字需要用小驼峰法
+
+
+    </script>
+
+    
+</body>
+</html>
