@@ -1,0 +1,32 @@
+<!-- JS 把一个网页当作一个文档，操作文档实际就是操作⻚面元素
+ 步骤：
+ 1. 找到DOM 节点对象（页面一个元素）
+ 2. 通过属性或方法操作（内容，属性，样式）
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点对象</title>
+</head>
+<body>
+    <h1 id="tar">1</h1>
+    <h1 class="one">2</h1>
+    <h1 class="one">3</h1>
+
+    <script>
+        // 通过元素 id 来查找元素
+        var h1=document.getElementById("tar") //得到的内容要赋值给一个变量
+        h1.innerHTML="content descrption" //给h1赋予内容
+        // 通过标签名(字符串）来查找元素，返回的是数组
+        var h1s=document.getElementsByTagName("h1") //获取数组
+        h1s[1].innerHTML="number two" //通过索引进行定位并进行属性操作
+        // 通过类名来查找元素
+        var h1u=document.getElementsByClassName("one")
+        h1u[1].innerHTML="number three"
+    </script>
+    
+</body>
+</html>

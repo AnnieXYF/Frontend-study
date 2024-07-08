@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function day(year,month,date){
+            var flag=0;
+            if ((year % 4 ==0 && year % 100 !=0) || (year % 400==0)){
+                flag++
+            }
+            var days=[31,28+flag,31,30,31,30,31,31,30,31,30,31]
+            var res=0;
+            for (var i =0; i<month-1;i++){
+                res+=days[i]
+            };
+            return res+date;
+        }
+        var getday = day(2024,7,1);
+        console.log(getday)
+    </script>
+</body>
+</html>
