@@ -5,17 +5,75 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>jquery 选择器</title>
+     <!-- 先导入jquery -->
+     <script src="jquery-3.7.1.min.js"></script>
  </head>
  <body>
+    <h1 class="one"></h1>
     <h1></h1>
-    <h1></h1>
-    <h1></h1>
- <!-- 先导入jquery -->
-    <script src="jquery-3.7.1.min.js"></script>
+    <h1 id="tar"></h1>
     <script>
-        // jquery 的选择器 + 操作函数
-        $("h1").html("jquery")
+      // jquery 的选择器 + 操作函数
+      $("h1").html("jquery") //伪数组：因为他可以操作一系列数据，虽然具有类似数组的行为（如 length 属性和索引访问），但它们不是数组对象
+      //  若只想对数组的一个对象操作可以用切片，当这会使jq对象变成DOM对象
+      $("h1")[0].innerHTML="hi,jquery"
+      // 使用jq 过滤器
+      $("h1:first").html("the first index jquery") //匹配第一个元素
+      $("h1:last").html("the last index jquery") //匹配最后一个元素
+      $("h1:eq(1)").html("the secondjquery") //匹配指定下标的元素
+
+
     </script>
+ </body>
+ </html>
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>jquery 操作函数</title>
+   <script src="jquery-3.7.1.min.js"></script>
+ </head>
+ <body>
+   <h2>basic information</h2>
+   <div>
+      name: <input id="user" type="text" name="name">
+   </div>
+   <div>
+      password: <input id="pass" type="password" name="password">
+   </div>
+   <button onclick="func()">btn</button>
+   <img class="two" src="image/1.jpeg" alt="">
+   <div id="pic"></div>
+      <script>
+         // 操作内容
+         console.log($("h2").html()) //获取内容
+         $("h2").html("please input information")//修改信息
+         function func(){
+            //获取表单元素的内容
+            console.log($("#user").val()) 
+            console.log($("#pass").val())
+            $("#user").val("kitty") //修改表单控件的内容
+         }
+         // 操作属性 prop("attrName","value")
+         console.log($("img").prop("src")) //读取标签属性，如果有多个会默认显示第一个属性
+         $("img").prop("src","image/2.jpeg") //设置标签属性，修改会把所有的标签都进行更改
+         $("img").addClass("three") //添加指定的类名,原有类名依然保留
+         $("img").removeClass("three") //移除指定的类型,如果参数省略,表示清空class属性值
+         $("img").toggleClass("three") //结合用户行为,实现动态切换类名.如果当前元素存在指定类名,则 移除;不存在则添加
+
+         // 操作样式 css("属性名","属性值")//设置行内样式/css(JS对象)//设置一组CSS样式 JS对象标记
+         var style={ //设置一个对象,也就是一个变量
+            "width":"200px",
+            "height":"200px",
+            "background-color":"yellow"
+         }
+
+         $("#pic").css(style) //获取书写好的样式变量
+         $("#pic").css("border","3px solid red") //设置单一样式
+      </script>
+
  </body>
  </html>

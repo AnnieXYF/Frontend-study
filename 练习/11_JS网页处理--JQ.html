@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 因为不再一个文件层，所以用绝对路径 -->
+    <script src="/Users/annie/Desktop/IT Project/全栈开发网课/Python 资料/python 全栈开发/前端笔记/jquery-3.7.1.min.js"></script>
+    <style>
+        div{
+            width:150px;
+            height:150px;
+            border-radius:20px;
+            background-color: gray;
+            border:none;
+        }
+        .on{
+            background-color: yellow;
+            border:3px solid red;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="btn" onclick="func();"></div>
+    <script>
+        function func(){
+            $(".btn").toggleClass("on");
+        }
+
+    </script>
+</body>
+</html>
+
