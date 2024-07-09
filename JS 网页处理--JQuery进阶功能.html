@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>元素添加</title>
+  <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div id="target">
+     <hr>
+  </div>
+  <h3></h3>
+  <script>
+     // 一个新JQ对象只能放在一个位置
+     var h3 = $("<h1></h1>").html("大哥位").prop("id","one").css("color","red") //链式生成元素属性样式和内容
+     $("#target").before(h3) //在$obj的前面添加新元素
+     var h4 = $("<h1>小弟位</h1>")
+     $("#target").after(h4) //在$obj的后面添加新元素
+     var h5 = $("<h1>大儿子</h1>")
+     $("#target").prepend(h5) //作为第一个子元素添加至$obj中
+     var h6 = $("<h1>小儿子</h1>")
+     $("#target").append(h6) //在$obj的末尾添加子元素newObj
+     //删除元素
+     $("h3").remove()
+
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件绑定</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="btn">事件绑定</div>
+    <script>
+        // jQ中的常用事件与dom类似，写法上就是把dom时间名称前面的on去掉就可以了，比如 onclick 变成 click，onmouseover变成mouseover。
+        $("#btn").on("click",function(){
+            $("#btn").html("事件") ////on("事件名称"，function)
+        })
+    </script>
+    
+</body>
+</html>
