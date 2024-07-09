@@ -47,3 +47,30 @@
     
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>其他小函数</title>
+</head>
+<body>
+  <h1 id="hide"> 我h1</h1>
+  <ul>
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+  </ul>
+
+  <script>
+    $("#hide").hide() //隐藏节点
+    $("#hide").show() //显示节点
+    // $(selector).each(function(index,element){}) 遍历 (index - 选择器的 index 位置 element - 当前的元素)
+    $("li").each(function(index,element){
+      console.log("遍历:",index,element) //打印出来的是一个dom对象
+    })
+
+  </script>
+</body>
+</html>
