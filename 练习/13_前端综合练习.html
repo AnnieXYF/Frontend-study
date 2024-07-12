@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/Users/annie/Desktop/IT Project/全栈开发网课/Python 资料/python 全栈开发/前端笔记/jquery-3.7.1.min.js"></script>
+    <style>
+        span{
+            color:rgb(186, 180, 180);
+            margin-left:10px;
+            font-size: 15px;
+        }
+        button {
+            position:relative;
+            margin-left:30px;
+            width: 50px;
+            height:30px;
+            border: none;
+            background-color: white;
+            font-size:14px;
+            text-align: center;
+            
+        }
+        .red{
+            background-color:red;
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>难度：</span>
+        <button class="choose">全部</button>
+        <button class="choose">初级</button>
+        <button class="choose">中级</button>
+        <button class="choose">高级</button>
+    </div>
+    <script>
+        $(".choose").each(function(index, element) {
+            $(element).on("click", function() {
+                $(".red").removeClass("red");
+                $(this).addClass("red");
+            });
+        });
+
+    </script>
+</body>
+</html>
