@@ -1,0 +1,19 @@
+<!-- xml解析会把换行和空格当成内容处理 -->
+<?xml version="1.0" encoding="utf-8"?>
+ <!-- 增加dtd 约束外部文件方式-->
+    <!ELEMENT students(student#)>
+    <!ELEMENT student(name,age,sex)>
+    <!ELEMENT name(#PCDATA)>
+    <!ELEMENT age(#PCDATA)>
+    <!ELEMENT sex(#PCDATA)>
+    <!ATTLIST student number ID #REQUIRED>]> 
+ <!-- 增加dtd 约束内部方式-->
+<!DOCTYPE students [
+    <!ELEMENT students(student#)>
+    <!ELEMENT student(name,age,sex)>
+    <!ELEMENT name(#PCDATA)>
+    <!ELEMENT age(#PCDATA)>
+    <!ELEMENT sex(#PCDATA)>
+    <!ATTLIST student number ID #REQUIRED>]> 
+ <!-- 增加dtd 约束互联网引用-->
+ <!DOCTYPE students PUBLIC "student.dtd" "http://..">

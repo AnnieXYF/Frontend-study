@@ -1,0 +1,24 @@
+<!-- xsd 是xml的结构定义 （是dtd的替代品，作用为约束） -->
+<?xml version="1.0" ?>
+<!-- 从指定互联网导入约束格式 -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <xsd:element name="student">
+ <!-- <complexType> 用于定义包含属性和子元素的复杂数据类型。它可以包含其他元素、属性和结构。 -->
+ <!-- <simpleType> 只能定义简单值，不包含子元素和属性。 -->
+   <xsd:complexType>
+   <!-- <xsd:sequence> 是 XML Schema (XSD) 中的一种元素模型，用于定义包含在复杂类型中的子元素的顺序和出现次数。它确保子元素按照指定的顺序出现。 -->
+     <xsd:sequence>
+     <!-- 本例子中complextype 包括四个子元素：firstname，lastname, email, mobile -->
+       <xsd:element name="firstName" type="xsd:string"/>
+       <xsd:element name="lastName" type="xsd:string"/>
+       <xsd:element name="email" type="xsd:string"/>
+       <xsd:element name="mobile" type="xsd:string"/>
+     </xsd:sequence>
+     <!-- 这个定义说明了某个 XML元素（即在xml文件中具备的某个标签）可以包含一个名为 schedule 的属性，其值是一个字符串。-->
+     <xsd:attribute name="schedule" type="xsd:string" />
+   </xsd:complexType>
+ </xsd:element>
+</xsd:schema>
+                     
+
+

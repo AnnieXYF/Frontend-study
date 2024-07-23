@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 增加外部约束 -->
+<!DOCTYPE students SYSTEM "student.dtd">
+
+<students>
+    <person>&lt;&gt;</person> 
+    <!-- cdata 之间可以直接写转义字符 -->
+    <![CDATA[
+    <>''"&"]]>
+    <name>annie</name>
+    <student number="haha_001">
+        <name>tom</name> 
+        <age>18</age>
+        <sex>male</sex>
+        <hobby>basketball</hobby>
+    </student>
+</students>
+<!-- 先有一个文档声明,必须放在全网页的首行且必须有个根标签（根标签可以是任意的命名）  -->
+<!-- XML（可扩展标记语言，eXtensible Markup Language）是一种用于描述数据的标记语言，常用做配置文件。类似于HTML  -->
+<!-- 没有被预定义，需要用户自行定义  -->
+<!-- 用法：
+   配置文件
+   保存数据 （小型数据库）
+   交换数据 （不同语言写的系统） -->
+
+<!-- xsi:schemaLocation=" student.xsd" 引用单独的xsd约束包 -->
+<student xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" student.xsd">
+  <firstName>John</firstName>
+  <lastName>Smith</lastName>
+  <email>jsmith@gmail.com</email>
+  <mobile>0211223344</mobile>
+</student>
+
+<exam subject="MATH 2113">
+<!-- 引用 style-exam.xsl 文件将xml 文件转换为html文件-->
+<?xml-stylesheet type="text/xsl" href="style-exam.xsl"?> 
+  <title>Abstract Algebra</title>
+  <venue>20.G01</venue>
+  <date>15/11/2018</date>
+  <time>1PM-4PM</time>
+  <note>Closed book exam, calculator allowed</note>
+</exam>
+
+
+
+    
+
+
+
+
+
+    
